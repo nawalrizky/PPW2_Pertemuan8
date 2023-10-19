@@ -15,6 +15,16 @@
                 </div>
             </form>
         </div>
+
+        @if (count($data_buku))
+        <div class="alert alert-success">
+            Ditemukan <strong>{{ count($data_buku) }}</strong> data dengan kata: <strong>{{ $cari }}</strong>
+        </div>
+        @else
+        <div class="alert alert-warning">
+            <h4>Data {{ $cari }} tidak ditemukan</h4> <a href="/buku">Kembali ke Daftar Buku</a>
+        </div>
+        @endif
         <table class="w-full border-collapse border   bg-white shadow-md">
             <thead class="bg-green-700 text-white">
                 <tr>
